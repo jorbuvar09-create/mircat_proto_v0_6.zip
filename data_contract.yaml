@@ -1,0 +1,14 @@
+# Esquema de datos para MIRCAT (series intradía o a intervalos fijos)
+version: 1
+entities:
+  price_series:
+    required_columns: ["t", "price", "ret", "volume"]
+    types:
+      t: int
+      price: float
+      ret: float
+      volume: float
+    notes: >
+      't' es un índice de tiempo entero (p.ej., minutos crecientes).
+      'ret' son retornos logarítmicos o simples.
+      'volume' en unidades nativas, usado para métricas de liquidez (Amihud).
